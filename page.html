@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wong Kar-wai: uma aula de cinema</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f1ea;--fg:#1d1a1a;--mut:#6b625c;--card:#fffaf3;--line:#e2d8cc;--acc:#b3243b;--acc2:#0f7a6b}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0d12;--fg:#efe9e1;--mut:#a39a93;--card:#17151d;--line:#2a2733;--acc:#ff4d6d;--acc2:#2ee6c5}}
+:root[data-theme="dark"]{--bg:#0e0d12;--fg:#efe9e1;--mut:#a39a93;--card:#17151d;--line:#2a2733;--acc:#ff4d6d;--acc2:#2ee6c5}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Times New Roman",serif}
+.hero{padding:72px 20px 56px;text-align:center;background:linear-gradient(120deg,#1a0f2e,#6d1230 45%,#0b5d57);color:#fff}
+.hero h1{font:700 clamp(2.4rem,8vw,4.6rem)/1.05 Georgia,serif;margin:0 0 12px;letter-spacing:.02em}
+.hero p{max-width:640px;margin:0 auto;opacity:.9}
+.tag{font:600 .8rem system-ui,sans-serif;letter-spacing:.25em;text-transform:uppercase;opacity:.8;margin-bottom:14px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5;overflow-x:auto;white-space:nowrap;padding:10px 16px;font:500 .9rem system-ui,sans-serif}
+nav a{color:var(--fg);text-decoration:none;margin-right:18px}
+nav a:hover{color:var(--acc)}
+main{max-width:860px;margin:0 auto;padding:8px 20px 60px}
+h2{font:700 1.8rem Georgia,serif;margin:52px 0 6px}
+h2 small{display:block;font:600 .75rem system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin-bottom:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.card h3{margin:0 0 6px;font:700 1.02rem system-ui,sans-serif;color:var(--acc2)}
+.card p{margin:0;font-size:.95rem}
+.tl{border-left:2px solid var(--line);margin:20px 0 0 8px;padding-left:22px}
+.film{position:relative;margin-bottom:22px}
+.film:before{content:"";position:absolute;left:-30px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--acc)}
+.film .y{font:700 .85rem system-ui,sans-serif;color:var(--acc);letter-spacing:.08em}
+.film h3{margin:0;font:700 1.2rem Georgia,serif}
+.film .m{font:.8rem system-ui,sans-serif;color:var(--mut);margin-bottom:4px}
+.film p{margin:0;font-size:.97rem}
+blockquote{margin:18px 0;padding:18px 22px;border-left:4px solid var(--acc);background:var(--card);border-radius:0 12px 12px 0}
+blockquote p{margin:0 0 6px;font-size:1.25rem;font-style:italic}
+blockquote cite{font:.82rem system-ui,sans-serif;color:var(--mut);font-style:normal}
+.band{height:90px;border-radius:12px;margin:22px 0;background:linear-gradient(90deg,#ff4d6d,#7a1fa2 40%,#2ee6c5);display:flex;align-items:center;justify-content:center;color:#fff;font:italic 1.1rem Georgia,serif;text-align:center;padding:0 16px}
+.band.b2{background:linear-gradient(90deg,#0b5d57,#c9a227 60%,#b3243b)}
+.src{font:.9rem/1.5 system-ui,sans-serif}
+.src a{color:var(--acc2)}
+.src li{margin-bottom:8px}
+footer{text-align:center;color:var(--mut);font:.8rem system-ui,sans-serif;padding:20px}
+.pill{display:inline-block;font:600 .75rem system-ui,sans-serif;padding:3px 10px;border-radius:99px;background:var(--line);margin:2px 4px 0 0}
+.slot{margin:0 0 10px;border-radius:10px;overflow:hidden;background:var(--line);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--mut);font:.8rem system-ui,sans-serif;padding:8px}
+.slot img{width:100%;height:100%;object-fit:contain;object-position:center top;display:block}
+.hero .slot{max-width:420px;margin:0 auto 22px;background:rgba(255,255,255,.12);color:#fff}
+.hero .slot img{object-fit:cover;object-position:center 18%}
+.slot.has{padding:0;background:none}
+/* Retratos da equipe: preservar a foto inteira e manter a pessoa centralizada. */
+.card .slot{aspect-ratio:4/3;background:var(--line)}
+.card .slot img{object-fit:contain;object-position:center center}
+/* Cartazes: proporção vertical e imagem inteira, sem cortes nas bordas. */
+.film .slot{width:min(100%,260px);aspect-ratio:2/3;margin:8px auto 12px;background:var(--line)}
+.film .slot img{object-fit:contain;object-position:center center}
+@media(max-width:560px){.film .slot{width:min(100%,220px)}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="tag">Aula de cinema</div>
+<h1>Wong Kar-wai</h1>
+<figure class="slot" data-k="wong-kar-wai" data-l="Wong Kar-wai"></figure><p>O poeta do desencontro. Neon, chuva, relógios, canções repetidas e amores que chegam cedo ou tarde demais.</p>
+</header>
+<nav>
+<a href="#vida">Vida</a><a href="#equipe">Equipe</a><a href="#filmes">Filmes</a><a href="#estilo">Estilo</a><a href="#visao">Visão de mundo</a><a href="#falas">Nas palavras dele</a><a href="#outros">O que dizem</a><a href="#ver">Por onde começar</a><a href="#fontes">Fontes</a>
+</nav>
+<main>
+
+<h2 id="vida"><small>01 Origem</small>De Xangai a Hong Kong</h2>
+<p>Wong Kar-wai nasceu em Xangai, em 1958, e se mudou para Hong Kong aos cinco anos. Chegou falando xangainês e mandarim, sem entender cantonês, e esse sentimento de ser estrangeiro numa cidade que virou sua atravessa toda a obra. A comunidade xangainesa de Hong Kong nos anos 1960 é o cenário de vários filmes, especialmente <em>In the Mood for Love</em>.</p>
+<p>Estudou design gráfico na Hong Kong Polytechnic, o que ajuda a explicar o rigor visual. No começo dos anos 1980 fez um curso de formação da emissora TVB e virou roteirista de TV e de cinema comercial. Estreou na direção em 1988 com <em>As Tears Go By</em> e, em 1992, fundou a produtora Jet Tone, que lhe deu liberdade para filmar do seu jeito, sem roteiro fechado e com prazos elásticos.</p>
+<div class="band">Cinema feito de memória: tudo o que lembramos parece mais vivo do que foi</div>
+
+<h2 id="equipe"><small>02 Colaboradores</small>Um cinema de equipe</h2>
+<div class="grid">
+<div class="card"><figure class="slot" data-k="christopher-doyle" data-l="Christopher Doyle"></figure><h3>Christopher Doyle</h3><p>Diretor de fotografia que desenhou o visual dos anos 1990: câmera na mão, cores saturadas, grande angular.</p></div>
+<div class="card"><figure class="slot" data-k="mark-lee-ping-bin" data-l="Mark Lee Ping Bin"></figure><h3>Mark Lee Ping Bin</h3><p>Fotografou <em>In the Mood for Love</em>, com enquadramentos mais contidos e elegantes.</p></div>
+<div class="card"><figure class="slot" data-k="william-chang" data-l="William Chang"></figure><h3>William Chang</h3><p>Direção de arte, figurino e montagem. É dele a textura dos filmes, incluindo os cheongsams de Maggie Cheung.</p></div>
+<div class="card"><figure class="slot" data-k="tony-leung" data-l="Tony Leung Chiu-wai"></figure><h3>Tony Leung Chiu-wai</h3><p>O rosto central da obra, ao lado de Maggie Cheung, Leslie Cheung, Faye Wong, Takeshi Kaneshiro e Brigitte Lin.</p></div>
+</div>
+
+<h2 id="filmes"><small>03 Filmografia</small>Em ordem cronológica</h2>
+<div class="tl">
+<div class="film"><div class="y">1988</div><figure class="slot" data-k="filme-as-tears-go-by" data-l="As Tears Go By"></figure><h3>As Tears Go By</h3><div class="m">Estreia · Andy Lau, Maggie Cheung</div><p>Drama de gângsteres, ainda convencional, mas já interessado em relações mal resolvidas.</p></div>
+<div class="film"><div class="y">1990</div><figure class="slot" data-k="filme-days-of-being-wild" data-l="Days of Being Wild"></figure><h3>Days of Being Wild</h3><div class="m">Leslie Cheung, Maggie Cheung, Tony Leung</div><p>Hong Kong dos anos 1960 e um rapaz incapaz de amar. Fracassou nas bilheterias e hoje é visto como um dos grandes filmes chineses. Prólogo emocional de <em>In the Mood for Love</em> e <em>2046</em>.</p></div>
+<div class="film"><div class="y">1994</div><figure class="slot" data-k="filme-ashes-of-time" data-l="Ashes of Time"></figure><h3>Ashes of Time</h3><div class="m">Wuxia · baseado em Louis Cha (Jin Yong)</div><p>Seu único filme de espadachins, fragmentado e abstrato, uma meditação sobre memória e arrependimento. Ganhou versão restaurada em 2008.</p></div>
+<div class="film"><div class="y">1994</div><figure class="slot" data-k="filme-chungking-express" data-l="Chungking Express"></figure><h3>Chungking Express</h3><div class="m">Brigitte Lin, Takeshi Kaneshiro, Faye Wong, Tony Leung</div><p>Rodado rápido numa pausa da pós-produção de <em>Ashes of Time</em>. Duas histórias de policiais solitários. Foi o filme que o tornou conhecido no mundo: leve, pop e romântico.</p></div>
+<div class="film"><div class="y">1995</div><figure class="slot" data-k="filme-fallen-angels" data-l="Fallen Angels"></figure><h3>Fallen Angels</h3><p>Nasceu como um possível terceiro segmento de <em>Chungking Express</em>. Mais noturno e sombrio, com assassino de aluguel, grande angular e câmera instável.</p></div>
+<div class="film"><div class="y">1997</div><figure class="slot" data-k="filme-happy-together" data-l="Happy Together"></figure><h3>Happy Together</h3><div class="m">Melhor direção em Cannes</div><p>Um casal gay de Hong Kong em Buenos Aires. Filme sobre exílio, lançado no ano da devolução de Hong Kong à China.</p></div>
+<div class="film"><div class="y">2000</div><figure class="slot" data-k="filme-in-the-mood-for-love" data-l="In the Mood for Love"></figure><h3>In the Mood for Love</h3><div class="m">Tony Leung, Maggie Cheung · Melhor ator em Cannes</div><p>Hong Kong, 1962: dois vizinhos descobrem que seus cônjuges têm um caso e se aproximam sem nunca consumar nada. Consolidou a fama mundial e aparece com frequência entre os melhores filmes do século.</p></div>
+<div class="film"><div class="y">2004</div><figure class="slot" data-k="filme-2046" data-l="2046"></figure><h3>2046</h3><p>Continuação espiritual de <em>In the Mood for Love</em>, misturando ficção científica, memória e relações passageiras. O número vem de um quarto de hotel e do ano em que acaba o período de 50 anos prometido a Hong Kong após a devolução.</p></div>
+<div class="film"><div class="y">2004</div><figure class="slot" data-k="filme-eros-segmento-the-hand" data-l="Eros, segmento “The Hand”"></figure><h3>Eros, segmento “The Hand”</h3><div class="m">Com Antonioni e Soderbergh · Gong Li</div><p>Curta num filme coletivo.</p></div>
+<div class="film"><div class="y">2007</div><figure class="slot" data-k="filme-my-blueberry-nights" data-l="My Blueberry Nights"></figure><h3>My Blueberry Nights</h3><div class="m">Norah Jones, Jude Law · Darius Khondji na fotografia</div><p>Primeiro filme em inglês e nos EUA. Recepção mais morna.</p></div>
+<div class="film"><div class="y">2013</div><figure class="slot" data-k="filme-the-grandmaster" data-l="The Grandmaster"></figure><h3>The Grandmaster</h3><div class="m">Tony Leung</div><p>Cinebiografia livre de Ip Man, mestre de Wing Chun e professor de Bruce Lee, com a mesma melancolia visual de sempre.</p></div>
+<div class="film"><div class="y">2023</div><figure class="slot" data-k="filme-blossoms-shanghai" data-l="Blossoms Shanghai"></figure><h3>Blossoms Shanghai</h3><div class="m">Série de TV · romance de Jin Yucheng</div><p>Xangai dos anos 1990. O retorno à cidade de origem, mais de uma década depois do último longa.</p></div>
+</div>
+
+<h2 id="estilo"><small>04 Linguagem</small>Como é um filme dele</h2>
+<div class="grid">
+<div class="card"><h3>Imagem</h3><p>Neon, luz de rua, tons quentes e esverdeados. Câmera lenta com imagem borrada (step-printing), planos muito fechados e personagens enquadrados por portas, janelas, espelhos e corredores estreitos.</p></div>
+<div class="card"><h3>Narrativa</h3><p>Pouco enredo e muita atmosfera. Histórias fragmentadas, narração em off poética, cenas curtas e elipses, como um filme feito de lembranças.</p></div>
+<div class="card"><h3>Método</h3><p>Sem roteiro tradicional: escreve e reescreve durante as filmagens, que podem durar meses, e deixa os atores improvisarem.</p></div>
+<div class="card"><h3>Som</h3><p>A música não ilustra a cena, ela cria o clima. Poucas canções repetidas à exaustão viram motivo emocional: “California Dreamin’”, “Yumeji’s Theme”, “Quizás, quizás, quizás”.</p></div>
+</div>
+
+<h2 id="visao"><small>05 Linguagem e visão de mundo</small>Como Wong Kar-wai transforma sentimentos em imagens</h2>
+<p>O cinema de Wong Kar-wai não se limita a contar histórias sobre amor, solidão e perda. Ele procura fazer o espectador <strong>sentir essas experiências por meio da forma do filme</strong>. A câmera, a montagem, a luz, as cores, a música e o comportamento dos atores não são enfeites acrescentados à narrativa: são a própria maneira de narrar. Um corredor percorrido muitas vezes, um olhar que demora um pouco mais, uma música que retorna ou uma pessoa imóvel enquanto a multidão passa podem expressar aquilo que o personagem não consegue dizer.</p>
+
+<h3>05.1 O tempo deixa de ser objetivo</h3>
+<p>Em muitos filmes, o tempo parece seguir uma linha clara: os acontecimentos se sucedem, as cenas avançam e a montagem organiza tudo para que o espectador saiba o que aconteceu antes e depois. Wong rompe com essa sensação. Para ele, o tempo pode ser vivido de maneiras diferentes: um minuto pode parecer interminável quando alguém espera uma pessoa; anos podem desaparecer numa elipse; uma lembrança pode voltar com mais intensidade do que o presente.</p>
+<p>Por isso, seus filmes recorrem a repetições, elipses, cortes abruptos, congelamentos e mudanças de velocidade. O relógio continua avançando, mas a experiência íntima dos personagens não acompanha necessariamente esse movimento. A montagem frequentemente omite acontecimentos importantes e nos deixa reconstruir o que ocorreu. Em vez de explicar cada passagem, o filme confia na nossa capacidade de perceber mudanças de humor, rotina e relação.</p>
+<p>Em <em>In the Mood for Love</em>, os encontros de Chow e Su Li-zhen se repetem em escadas, corredores e no caminho para comprar comida. A repetição cria a impressão de uma rotina, mas cada retorno carrega uma diferença: os personagens já sabem um pouco mais sobre o outro e sobre o próprio desejo. O tempo parece circular, não avançar em linha reta.</p>
+
+<h3>05.2 Câmera lenta, step-printing e borrões: diferentes maneiras de sentir o movimento</h3>
+<p>É comum chamar toda imagem desacelerada de “câmera lenta”, mas Wong trabalha com procedimentos distintos. Na câmera lenta convencional, a ação é registrada com mais quadros por segundo e reproduzida na velocidade normal. O movimento fica suave e alongado. Já o <em>step-printing</em> duplica quadros na impressão ou na montagem, produzindo um movimento entrecortado, com pequenas pausas ou rastros. Quando combinado a uma gravação com poucos quadros por segundo e exposição mais longa, pode gerar borrões e uma sensação de movimento irregular.</p>
+<p>O efeito não é apenas estético. Ele altera a nossa percepção de quem está vivendo o tempo. Em <em>Chungking Express</em>, há momentos em que a multidão vira um fluxo borrado enquanto um personagem permanece relativamente nítido. A cidade parece correr ao redor de alguém preso à própria espera. Em outras sequências, o borrão acompanha perseguições e deslocamentos, dando à cidade uma energia nervosa, quase caótica.</p>
+<p>Em <em>Fallen Angels</em>, a distorção de movimento, a câmera próxima dos corpos e a grande-angular produzem uma experiência urbana instável e febril. Já em <em>In the Mood for Love</em>, as passagens desaceleradas são mais contidas: os passos, os encontros e os gestos parecem ganhar duração. O efeito faz o espectador permanecer dentro de um instante que, na vida cotidiana, passaria rapidamente.</p>
+<p>É importante perceber que a desaceleração não significa sempre romantismo. Em alguns filmes, a manipulação do movimento transmite ansiedade, desorientação ou alienação. Wong não usa uma técnica para ilustrar uma emoção fixa; ele a combina com o enquadramento, o som e a situação dramática para construir uma sensação específica.</p>
+
+<h3>05.3 Uma câmera que observa, espia e às vezes se aproxima demais</h3>
+<p>A câmera de Wong raramente parece ocupar um ponto de vista neutro. Ela pode acompanhar os personagens de perto, circular por espaços apertados ou observá-los de longe, como se estivesse escondida. Portas, janelas, espelhos, cortinas, grades, ombros de outras pessoas e objetos em primeiro plano frequentemente bloqueiam parte da imagem. São os chamados <em>enquadramentos dentro do enquadramento</em>: a tela contém outras molduras que limitam o que conseguimos ver.</p>
+<p>Em <em>In the Mood for Love</em>, essa escolha tem um sentido narrativo. Chow e Su vivem cercados por vizinhos, regras sociais e olhares alheios. A câmera os observa por frestas e passagens estreitas, como se também precisasse respeitar a distância que eles mantêm. Muitas vezes, os personagens não aparecem juntos no mesmo plano, mesmo quando estão conversando. A composição prolonga a separação entre eles e transforma a contenção em parte da experiência do espectador.</p>
+<p>Em <em>Fallen Angels</em>, a estratégia é quase oposta: a lente grande-angular aproxima os rostos, deforma as bordas e faz os ambientes parecerem ainda mais apertados. A câmera na mão e os movimentos repentinos dão a impressão de que estamos dentro da agitação da cidade. Em ambos os casos, a câmera não apenas registra Hong Kong: ela define como sentimos aquele espaço.</p>
+
+<h3>05.4 Filmar sem um roteiro fechado: descobrir o filme durante o processo</h3>
+<p>Wong é conhecido por começar projetos sem um roteiro tradicional totalmente concluído. Em geral, parte de uma ideia, de personagens, de situações ou de uma atmosfera e desenvolve o material durante as filmagens. Cenas e diálogos podem ser reescritos, os atores recebem informações gradualmente e a equipe experimenta diferentes possibilidades. O processo pode envolver muitas tomadas e uma quantidade enorme de material que nunca chega à versão final.</p>
+<p>Isso não quer dizer que tudo seja improvisado ao acaso. O método depende de uma equipe que se conhece profundamente e consegue trabalhar com mudanças constantes. O próprio Wong já comparou sua função à de um líder de banda: precisa manter todos em sintonia enquanto a criação muda de direção. Christopher Doyle, William Chang e outros colaboradores recorrentes ajudam a construir essa continuidade mesmo quando o roteiro ainda está em transformação.</p>
+<p>A montagem é decisiva. O sentido de uma cena pode mudar quando ela é colocada ao lado de outra; uma personagem pode ganhar uma importância inesperada; uma história pode ser reorganizada depois de meses de filmagem. Tony Leung já descreveu a experiência de terminar um filme sem saber exatamente qual seria a estrutura final e descobrir o resultado na estreia, como o público. O filme, portanto, não está inteiramente pronto antes de ser filmado: ele é encontrado também na edição.</p>
+<p><em>In the Mood for Love</em> é um exemplo marcante de produção longa e transformação contínua. A história passou por mudanças durante o processo, e a versão final é resultado de escolhas feitas tanto no set quanto na montagem. Essa abertura permite que o filme encontre uma forma mais sensível às relações entre os personagens, embora também torne o método exigente e imprevisível para elenco e equipe.</p>
+
+<h3>05.5 Cor, luz e textura: a aparência de uma lembrança</h3>
+<p>Vermelhos intensos, verdes profundos, amarelos quentes, azuis frios, sombras densas e letreiros de neon compõem parte do vocabulário visual de Wong. Mas seria simplista dizer que cada cor possui um significado fixo. A paleta muda de filme para filme e depende da relação entre cenário, figurino, iluminação, época e estado emocional.</p>
+<p>Em <em>In the Mood for Love</em>, os vermelhos, verdes e tons âmbar convivem com corredores escuros, paredes estampadas, luminárias e tecidos. Os vestidos de Su Li-zhen não são apenas figurino elegante: sua repetição e suas variações ajudam a marcar a passagem dos dias e a presença constante da personagem. A riqueza visual contrasta com a reserva emocional dos protagonistas. Tudo parece intenso na imagem, enquanto quase nada é declarado em palavras.</p>
+<p><em>Chungking Express</em> trabalha com outra energia: luzes coloridas, vitrines, lanchonetes, reflexos e ruas cheias. A cidade parece vibrante, mas essa abundância visual não elimina a solidão. Em <em>Days of Being Wild</em>, a fotografia mais sombria e os ambientes úmidos colaboram para uma sensação de vazio e desorientação. A cor, portanto, não decora o mundo: ajuda a determinar como esse mundo será sentido.</p>
+<p>A textura também importa. Granulação, fumaça, reflexos no vidro, chuva, superfícies molhadas e luzes desfocadas fazem a imagem parecer menos objetiva e mais próxima de uma recordação. Não vemos necessariamente o mundo como ele seria; vemos uma versão atravessada pela memória, pelo desejo e pela distância.</p>
+
+<h3>05.6 Personagens que falam pouco e revelam muito</h3>
+<p>Os personagens de Wong costumam ser contraditórios: querem companhia, mas se protegem; desejam mudar, mas repetem hábitos; sentem intensamente, mas não encontram palavras ou coragem para agir. Em vez de explicar sua psicologia por longos diálogos, o diretor observa comportamentos pequenos: preparar uma refeição, telefonar, caminhar pela mesma rua, ouvir uma música, conversar com um objeto ou repetir um pedido.</p>
+<p>Em <em>Chungking Express</em>, o policial 223 transforma latas de abacaxi com data de validade em uma espécie de calendário afetivo depois de ser abandonado. O policial 663 conversa com objetos de seu apartamento, como se eles pudessem compartilhar sua tristeza. São gestos excêntricos, mas reconhecíveis: quando uma relação termina, objetos comuns podem adquirir um significado desproporcional.</p>
+<p>Em <em>In the Mood for Love</em>, a emoção aparece na postura, nos olhares e nas pausas de Chow e Su. A atuação contida de Tony Leung e Maggie Cheung faz com que pequenas alterações pareçam enormes. Um olhar sustentado ou uma hesitação pode indicar uma mudança que os personagens não verbalizam. O espectador precisa participar da leitura, em vez de receber todas as respostas prontas.</p>
+<p>Wong também se interessa por personagens que vivem à margem de uma rotina satisfatória: trabalhadores noturnos, pessoas solitárias, amantes, imigrantes e indivíduos deslocados. Eles não são necessariamente heróis ou vilões. São pessoas tentando encontrar alguma forma de conexão em circunstâncias que nem sempre controlam.</p>
+
+<h3>05.7 Hong Kong: uma cidade cheia de gente e de isolamento</h3>
+<p>Hong Kong é mais do que cenário. A densidade dos prédios, os apartamentos pequenos, os restaurantes, as passagens estreitas, os transportes e a vida noturna moldam as relações. Os personagens estão quase sempre perto de outras pessoas, mas proximidade física não significa intimidade. A cidade oferece encontros a todo momento e, ainda assim, seus habitantes podem continuar profundamente sozinhos.</p>
+<p>Há também uma dimensão histórica. Muitos filmes retomam a Hong Kong dos anos 1960, período ligado à infância do diretor e à experiência de comunidades que migraram de Xangai. Em obras como <em>Days of Being Wild</em>, <em>In the Mood for Love</em> e <em>2046</em>, o passado pessoal se mistura a uma cidade em transformação. A devolução de Hong Kong à China, em 1997, intensificou leituras sobre identidade, pertencimento e a sensação de que um mundo está prestes a desaparecer. Isso não significa que cada cena seja uma alegoria política, mas ajuda a compreender a presença recorrente de transição e impermanência.</p>
+
+<h3>05.8 Música e repetição: quando uma canção vira memória</h3>
+<p>A música em Wong não funciona apenas como fundo. Ela pode organizar o ritmo de uma sequência, criar uma associação entre momentos distantes ou revelar o que os personagens não dizem. O diretor costuma trabalhar com canções recorrentes e temas instrumentais que retornam até se tornarem parte da memória do espectador.</p>
+<p>Em <em>In the Mood for Love</em>, “Yumeji’s Theme”, de Shigeru Umebayashi, acompanha repetidamente as caminhadas e os encontros de Chow e Su. A repetição transforma situações simples em um ritual. Quando a música volta, não ouvimos apenas a melodia: lembramos dos encontros anteriores e sentimos o peso do que mudou entre eles. As canções de Nat King Cole também evocam um mundo sonoro que amplia a atmosfera da Hong Kong retratada.</p>
+<p>Em <em>Chungking Express</em>, “California Dreamin’” e “Dreams” ajudam a expressar a inquietação de Faye, sua fantasia de fuga e sua relação particular com o cotidiano. A música pode ser diegética — tocada dentro do mundo do filme, como no rádio ou no estabelecimento — e, ao mesmo tempo, ganhar uma força subjetiva, porque passa a representar o estado interior de quem a escuta.</p>
+
+<h3>05.9 O que tudo isso significa: o cinema do que não se concretiza</h3>
+<p>As escolhas formais de Wong convergem para uma visão de mundo em que a experiência humana é feita de aproximações, atrasos, repetições e possibilidades perdidas. O amor raramente aparece como uma conquista simples. Mais frequentemente, é uma tensão entre desejo e limite: o que se quer dizer e não se diz, o encontro que quase acontece, a pessoa que chega tarde, a decisão adiada.</p>
+<p>Por isso, os finais nem sempre oferecem resolução. Os personagens podem seguir em frente sem deixar de carregar o passado. Objetos, quartos, músicas e lugares tornam-se recipientes de lembranças. A memória, porém, não preserva o passado de maneira fiel: seleciona, transforma e às vezes idealiza aquilo que já não pode ser recuperado.</p>
+<p>O gesto final de <em>In the Mood for Love</em> — Chow sussurrando um segredo no buraco de uma ruína — condensa essa ideia. Há coisas que não encontram lugar no presente e precisam ser confiadas a outro tempo, a um espaço que não responderá. <strong>O cinema de Wong Kar-wai habita justamente esse intervalo entre o que aconteceu e o que poderia ter acontecido.</strong> Sua câmera não tenta resolver a saudade; ela dá forma a ela.</p>
+
+<h2 id="falas"><small>06 Nas palavras dele</small>Frases curtas, ideias grandes</h2>
+<p style="color:var(--mut);font-size:.9rem">Traduções livres de falas em inglês, mantidas curtas de propósito. Os links completos estão nas fontes.</p>
+<blockquote><p>“Tudo o que vem da memória é vívido.”</p><cite>Wong Kar-wai, em coletânea de falas no Wikiquote, sobre a cor nos seus filmes</cite></blockquote>
+<blockquote><p>“Eu sempre termino o roteiro quando o filme está pronto!”</p><cite>Wong Kar-wai, em conversa com Matthew Weiner na Academia de Hollywood (oscars.org)</cite></blockquote>
+<blockquote><p>“Fazer este filme foi como nadar no inverno.”</p><cite>Wong Kar-wai sobre <em>The Grandmaster</em>, entrevista ao Reverse Shot (2013)</cite></blockquote>
+<blockquote><p>“Paisagens que guardassem memória e significado.”</p><cite>Wong Kar-wai sobre as locações de <em>Blossoms Shanghai</em>, entrevista ao MUBI</cite></blockquote>
+<div class="band b2">Quando perguntado sobre o tempo de trabalho, ele compara com o kung fu: o tempo que você precisa gastar</div>
+
+<h2 id="outros"><small>07 Olhares de fora</small>O que dizem sobre ele</h2>
+<div class="grid">
+<div class="card"><h3>AV Club: jazz</h3><p>O perfil do AV Club o descreve como um dos diretores mais empolgantes do cinema mundial, com um estilo deslumbrante que lembra os improvisos de um músico de jazz.</p></div>
+<div class="card"><h3>Norah Jones: jazz também</h3><p>Nos extras do DVD de <em>My Blueberry Nights</em>, a cantora e atriz diz que ele faz filmes como um jazzista, e os atores comentam como foi trabalhar sem roteiro durante as filmagens.</p></div>
+<div class="card"><h3>Tony Lan, 2004</h3><p>O crítico taiwanês o chama de grande autor de filmes românticos e também de um “vendedor” afetuoso, e vê no estilo uma mistura de realismo retrô com imaginação abstrata.</p></div>
+<div class="card"><h3>Tony Rayns, Sight and Sound</h3><p>Em 1995, numa entrevista no set de <em>Fallen Angels</em>, Rayns destacou como Wong escala grandes estrelas contra o tipo, o que contraria a lógica da indústria, mas faz os atores fazerem fila para trabalhar com ele.</p></div>
+<div class="card"><h3>Sight and Sound, 2025</h3><p>A revista dedicou uma edição a uma história oral de <em>In the Mood for Love</em>, perguntando se não seria o filme mais deslumbrante e castamente erótico da história. Seu prestígio só cresceu desde Cannes, em 2000.</p></div>
+<div class="card"><h3>Crítica de <em>My Blueberry Nights</em></h3><p>Uma resenha do ioncinema notou que o estilo inconfundível dele foi transposto para os EUA, mas que o olhar “exótico” sobre o Ocidente não funcionou tão bem.</p></div>
+</div>
+<p>Fora dos textos críticos, o retrato clássico dele é de um sujeito com óculos escuros sempre postos, cabelo espetado e cigarro na mão, um verdadeiro “pôster” da Hong Kong cool, como descreveu a rádio KPBS em uma entrevista de 1995. Ele presidiu o júri de Cannes em 2006 (o primeiro chinês a fazê-lo) e o de Berlim em 2013, e sua influência é visível em nomes como Sofia Coppola, Barry Jenkins e Nicolas Winding Refn.</p>
+
+<h2 id="ver"><small>08 Roteiro</small>Por onde começar</h2>
+<p><span class="pill">1º</span> <em>Chungking Express</em> e <em>In the Mood for Love</em>, as portas de entrada.<br>
+<span class="pill">2º</span> <em>Happy Together</em> e <em>Days of Being Wild</em>, o lado mais cru e histórico.<br>
+<span class="pill">3º</span> <em>Fallen Angels</em> e <em>The Grandmaster</em>, para ver o estilo em outros gêneros.<br>
+<span class="pill">4º</span> <em>2046</em> e <em>Ashes of Time</em>, os mais experimentais, melhores depois de pegar o ritmo dele.</p>
+
+<h2 id="fontes"><small>09 Para ir além</small>Fontes e leituras</h2>
+<ul class="src">
+<li><a href="https://www.bfi.org.uk/sight-and-sound/features/poet-time-wong-kar-wai-chungking-express">Sight and Sound (BFI): Poet of time, Tony Rayns entrevista Wong sobre Chungking Express</a></li>
+<li><a href="https://www.bfi.org.uk/interviews/christopher-doyle-shooting-chungking-express">BFI: Christopher Doyle sobre a fotografia de <em>Chungking Express</em> e o método de filmagem</a></li>
+<li><a href="https://www.bfi.org.uk/sight-and-sound/interviews/wong-kar-wai-mood-love-25">Sight and Sound (BFI): Wong Kar-wai sobre <em>In the Mood for Love</em>, música e colaboração com Christopher Doyle e Mark Lee Ping-bin</a></li>
+<li><a href="https://www.kpbs.org/news/2003/mar/30/interview-wong-kar-wai/">KPBS: entrevista sobre o processo de trabalho e a colaboração recorrente da equipe</a></li>
+<li><a href="https://www.criterion.com/current/posts/197-in-the-mood-for-love">The Criterion Collection: análise da cor, dos espaços e da construção visual de <em>In the Mood for Love</em></a></li>
+<li><a href="https://filmcolors.org/wp-content/uploads/2016/01/Brinckmann_CinematicColorAsLikenessAndAsArtifact_2001_2015_print.pdf">Cinematic Color as Likeness and as Artifact: estudo sobre manipulação do movimento e cor no cinema de Wong Kar-wai</a></li>
+<li><a href="https://www.bfi.org.uk/sight-and-sound/news/sight-sound-may-2025-issue">Sight and Sound, maio de 2025: história oral de In the Mood for Love</a></li>
+<li><a href="https://mubi.com/program-notes/my-entire-life-may-have-been-leading-up-to-this-wong-kar-wai-on-blossoms-shanghai">MUBI: Wong Kar Wai sobre Blossoms Shanghai</a></li>
+<li><a href="https://movingimagesource.us/articles/wong-kar-wai-a-reverse-shot-talkie-20130823">Reverse Shot: entrevista sobre The Grandmaster</a></li>
+<li><a href="https://www.oscars.org/node/55311">Academia de Hollywood: Wong Kar Wai e Matthew Weiner</a></li>
+<li><a href="https://www.hollywoodreporter.com/race/wong-kar-wai-master-hong-609026">The Hollywood Reporter: entrevista sobre The Grandmaster</a></li>
+<li><a href="https://www.avclub.com/wong-kar-wai-1798208135">AV Club: perfil de Wong Kar-wai</a></li>
+<li><a href="https://en.wikiquote.org/wiki/Wong_Kar-wai">Wikiquote: frases de Wong Kar-wai</a></li>
+<li><a href="https://www.perlego.com/book/562116/wong-karwai-interviews-pdf">Livro “Wong Kar-wai: Interviews” (coletânea, inclui conversa com Tony Lan)</a></li>
+</ul>
+</main>
+<footer>Aula montada para estudo. Os trechos de terceiros foram resumidos com palavras próprias.</footer>
+<script>
+/* Cole a URL da imagem entre as aspas de cada chave. Vazio = mostra o espaço marcado. */
+const IMAGENS = {
+  'wong-kar-wai': 'https://image.tmdb.org/t/p/w500/o8xGbg4t0RLCwClezvR94qLfVmL.jpg',
+  'christopher-doyle': 'https://p3.itc.cn/images01/20201005/d062d31663fe4a418e012f89832e2184.jpeg',
+  'mark-lee-ping-bin': 'https://storage.googleapis.com/tghff_outland/image/photo/2024/GHFA/huge/photo_421138568a472216b8e7bda787a393cb.jpeg',
+  'william-chang': 'https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/2016/10/19/fb-william-chang-3.jpg?itok=3OEFNVfM',
+  'tony-leung': 'https://is1-ssl.mzstatic.com/image/thumb/iPrlUaRMyRFFGaBASJJwbQ/1200x675mf.jpg',
+  'filme-as-tears-go-by': 'https://i.pinimg.com/736x/5f/ba/39/5fba39f934413414cd17c110f985b874.jpg',
+  'filme-days-of-being-wild': 'https://m.media-amazon.com/images/M/MV5BYTk0ZDRmNWUtOTcxOS00ZTYzLTk0YmQtZTM3MTdlZjFiNDRkXkEyXkFqcGc%40._V1_.jpg',
+  'filme-ashes-of-time': 'https://www.mauvais-genres.com/7711-large_default/ashes-of-time-french-movie-poster-23x32-94-wong-kar-wai-dung-che-sai-duk.jpg',
+  'filme-chungking-express': 'https://stat.ameba.jp/user_images/20160206/09/madamezelda/0d/b2/j/o0680096413559609319.jpg',
+  'filme-fallen-angels': 'https://m.media-amazon.com/images/M/MV5BMWI3MDk4N2ItNzU2NS00Zjc5LWIxMDYtMGNmZmM2YzMzMDk3XkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg',
+  'filme-happy-together': 'https://filmartgallery.com/cdn/shop/files/Happy-Together-Vintage-Movie-Poster-Original_e366a711_5000x.jpg?v=1771962506',
+  'filme-in-the-mood-for-love': 'https://filmartgallery.com/cdn/shop/files/In-the-Mood-For-Love-Vintage-Movie-Poster-Original_1b6d92a2_5000x.jpg?v=1771970484',
+  'filme-2046': 'https://universosesquecidos.files.wordpress.com/2016/12/2046_01.jpg?w=620',
+  'filme-eros-segmento-the-hand': 'https://s3.amazonaws.com/criterion-production/janus_promo_packages/488-/WKW_Poster_TheHand_original.jpg',
+  'filme-my-blueberry-nights': 'https://www.impawards.com/2008/posters/my_blueberry_nights_xlg.jpg',
+  'filme-the-grandmaster': 'https://i0.wp.com/www.heyuguys.com/images/2014/11/The-Grandmaster-Poster.jpg?fit=1880%2C1430&ssl=1',
+  'filme-blossoms-shanghai': 'https://thefilmstage.com/wp-content/uploads/2020/08/Blossoms-poster-01-ENG-FINAL-2.jpg',
+};
+document.querySelectorAll('.slot').forEach(function(f){
+  var k=f.dataset.k,l=f.dataset.l,u=IMAGENS[k];
+  function vazio(){f.className='slot';f.textContent='Imagem: '+l+' ('+k+')';}
+  if(!u){vazio();return;}
+  var i=new Image();i.alt=l;i.referrerPolicy='no-referrer';
+  i.onload=function(){f.className='slot has';f.textContent='';f.appendChild(i);};
+  i.onerror=function(){f.className='slot';f.textContent='Não carregou: '+u;};i.src=u;
+});
+</script>
+</body>
+</html>
